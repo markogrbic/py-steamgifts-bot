@@ -1,5 +1,20 @@
 # py-steamgifts-bot
-A bot for https://www.steamgifts.com written in Python.
+A bot for https://www.steamgifts.com/ written in Python.
+
+# Install and run
+
+Log in to STeamGifts with your browser and find your PHPSESSID cookie data.
+Add the cookie data to the settings.ini file and save.
+
+In termianl position yourself in the src folder.
+
+Run the following:
+```
+python -m venv .venv
+source .venv/bin/activate
+pip isntall -r requirements.txt
+python main.py
+```
 
 # Notes
 
