@@ -23,6 +23,12 @@ python main.py
 The bot is currently configured to only enter giveaways in your Wishlist (it also skips any pinned giveaways).
 It also waits until you have at least 100 poitns avilable on your account before it starts entering giveaways.
 
+# Features
+
+## Skip Giveaways
+
+It is possbile to skip giveawys by includinng the Steam game URL exactly as provided in the SteamGifts website to the skip_giveaway.txt file.
+
 # Notes
 
 This is based of the code from https://github.com/stilManiac/steamgifts-bot. The original project has a lot of dependencies and no longer works out of the box on latest version of Python without some tweaks. The initial version of this project is a slimmed down version with minimum dependencies.
