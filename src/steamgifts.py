@@ -161,3 +161,7 @@ class SteamGifts():
             print(txt)
 
         self.get_game_content()
+
+    def get_giveaway_steam_url(self, element: bs4.element.Tag) -> str:
+        steam_url: str = element.find('a', {'class': 'giveaway__icon'})['href']
+        return steam_url
