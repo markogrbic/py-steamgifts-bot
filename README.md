@@ -27,7 +27,7 @@ It also waits until you have at least 100 poitns avilable on your account before
 
 ## Skip Giveaways
 
-It is possbile to skip giveawys by includinng the Steam game URL exactly as provided in the SteamGifts website to the skip_giveaway.txt file.
+It is possbile to skip giveaways by includinng the Steam game URL exactly as provided in the SteamGifts website to the skip_giveaway.txt file.
 
 # Notes
 
