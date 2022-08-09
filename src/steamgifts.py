@@ -110,6 +110,11 @@ class SteamGifts():
                     time.sleep(900)
                     self.start()
 
+                steam_url = self.get_giveaway_steam_url(item)
+                if self.check_skip_giveaway(steam_url):
+                    print(f"Skipping {steam_url}")
+                    continue
+
                 game_cost = item.find_all('span', {'class': 'giveaway__heading__thin'})[-1]
 
                 if game_cost:
@@ -165,3 +170,18 @@ class SteamGifts():
     def get_giveaway_steam_url(self, element: bs4.element.Tag) -> str:
         steam_url: str = element.find('a', {'class': 'giveaway__icon'})['href']
         return steam_url
+
+    def check_skip_giveaway(self, steam_url) -> bool:
+        COMMENT_CHAR = "#"
+        with open ("skip_giveaway.txt", "r") as file:
+            for line in file:
+                if line[0] == COMMENT_CHAR:
+                    continue
+                elif line == steam_url:
+                    file.close()
+                    return True
+                else:
+                    continue
+            
+            file.close()
+            return False

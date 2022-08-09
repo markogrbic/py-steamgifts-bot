@@ -1,4 +1,4 @@
-# Add Steam Game URLs to this file for giveaways which you wish to skip>
+# Add Steam Game URLs in nthe format as they appear in SteamGifts to this file for giveaways which you wish to skip.
 # Any line preceded with a "#" character is considered a comment and will be ignored.
 # Example: Skipping Control (https://store.steampowered.com/sub/543422/) because it can not be easily upgraded and we
 # are interested in the Control Ultimate Edition (https://store.steampowered.com/app/870780/Control_Ultimate_Edition/)
