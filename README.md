@@ -22,12 +22,20 @@ python main.py
 
 The bot is currently configured to only enter giveaways in your Wishlist (it also skips any pinned giveaways).
 It also waits until you have at least 100 poitns avilable on your account before it starts entering giveaways.
+It will also skip pinned gieaways.
+These settings can be configured in the provided "settings.ini" file.
+
+__Please note that the bot is configured (hard coded) to run every 15 minutes. Please refrain from shortening this time as this would cause additional stress on the server.__
 
 # Features
 
 ## Skip Giveaways
 
-It is possbile to skip giveaways by including the Steam game URL exactly as provided in the SteamGifts website to the skip_giveaway.txt file.
+It is possbile to skip wishlisted giveaways by including the Steam game URL exactly as provided in the SteamGifts website to the skip_giveaway.txt file.
+
+## Docker
+
+Running from Docker is supported via the included Dockerfile.
 
 # Notes
 

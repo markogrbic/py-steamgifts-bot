@@ -175,6 +175,9 @@ class SteamGifts():
         COMMENT_CHAR = "#"
         with open ("skip_giveaway.txt", "r") as file:
             for line in file:
+                # Remove line breaks from each line.
+                line = ' '.join(line.splitlines())
+                
                 if line[0] == COMMENT_CHAR:
                     continue
                 elif line == steam_url:
