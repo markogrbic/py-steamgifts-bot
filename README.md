@@ -16,7 +16,7 @@ Run the following:
 ```
 python -m venv .venv
 source .venv/bin/activate
-pip isntall -r requirements.txt
+pip install -r requirements.txt
 python main.py
 ```
 
