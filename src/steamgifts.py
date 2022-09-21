@@ -77,6 +77,7 @@ class SteamGifts():
         while True:
             datetime_now = datetime.now()
             txt = f"{str(datetime_now)}: Retrieving {self.gifts_type} games from page {n}."
+            print(txt)
 
             filtered_url = self.filter_url[self.gifts_type] % n
             paginated_url = f"{self.base}/giveaways/{filtered_url}"
@@ -126,7 +127,7 @@ class SteamGifts():
 
                 if self.points - int(game_cost) < 0:
                     datetime_now = datetime.now()
-                    txt = f"{str(datetime_now)}: Not enough points to enter {self.gifts_type}: {game_name}."
+                    txt = f"{str(datetime_now)}: Not enough points to enter {self.gifts_type}: {game_name}. We currently have {self.points} but need {game_cost} points."
                     print(txt)
                     continue
 
@@ -136,7 +137,7 @@ class SteamGifts():
                     if res:
                         self.points -= int(game_cost)
                         datetime_now = datetime.now()
-                        txt = f"{str(datetime_now)}: One more {self.gifts_type} game! Has just entered {game_name}."
+                        txt = f"{str(datetime_now)}: Entering giveaway for {game_name} (cost {game_cost} points) from {self.gifts_type}. Steam URL - \"{steam_url}\"."
                         print(txt)
                         time.sleep(randint(3, 7))
 
