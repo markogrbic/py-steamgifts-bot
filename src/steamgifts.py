@@ -174,7 +174,7 @@ class SteamGifts():
 
     def check_skip_giveaway(self, steam_url) -> bool:
         COMMENT_CHAR = "#"
-        with open ("skip_giveaway.txt", "r") as file:
+        with open ("skip_giveaways.txt", "r") as file:
             for line in file:
                 # Remove line breaks from each line.
                 line = ' '.join(line.splitlines())
