@@ -137,7 +137,7 @@ class SteamGifts():
                     if res:
                         self.points -= int(game_cost)
                         datetime_now = datetime.now()
-                        txt = f"{str(datetime_now)}: Entering giveaway for {game_name} (cost {game_cost} points) from {self.gifts_type}. Steam URL - \"{steam_url}\"."
+                        txt = f"{str(datetime_now)}: Entering giveaway for {game_name} ({game_cost}P). Steam URL - \"{steam_url}\"."
                         print(txt)
                         time.sleep(randint(3, 7))
 

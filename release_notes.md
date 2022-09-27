@@ -1,5 +1,9 @@
 # Release Notes
 
+## Py-SteamGifts-Bot v0.2.2 (27 September 2022)
+- Updated readme with information on how to run the bot via Docker.
+- Updated status update text for CLI.
+
 ## Py-SteamGifts-Bot v0.2.1 (21 September 2022)
 - Fixed a bug where the script was looking for incorrect file "skip_giveaway.txt" instead of "skip_giveaways.txt" which resulted in a crash.
 - Fixed incorrect version number displayed in CLI.
