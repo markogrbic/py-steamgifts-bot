@@ -1,3 +1,4 @@
+from types import NoneType
 import bs4
 import json
 import requests
@@ -85,12 +86,15 @@ class SteamGifts():
             soup = self.get_soup_from_page(paginated_url)
 
             pinned = soup.find('div', {'class': 'pinned-giveaways__outer-wrap'})
+            if type(pinned) is NoneType:
+                common_sections = soup.find_all('div', {'class': 'giveaway__row-outer-wrap'})
+            else:
+                common_sections = pinned.find_next_siblings()
 
             game_list = []
             if self.pinned:
                 game_list = pinned.find_all('div', {'class': 'giveaway__row-inner-wrap'})
 
-            common_sections = pinned.find_next_siblings()
             common_list = []
             for item in common_sections:
                 common_list += item.find_all('div', {'class': 'giveaway__row-inner-wrap'})

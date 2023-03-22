@@ -2,7 +2,7 @@ import configparser
 
 from steamgifts import SteamGifts
 
-print("Welcome to Steam Gifts bot v0.2.2.")
+print("Welcome to Steam Gifts bot v0.2.3")
 
 config_file = "settings.ini"
 config = configparser.ConfigParser()
