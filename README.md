@@ -13,7 +13,19 @@ The idea behind this project is to have a bot run in the background on your PC a
     unzip py-steamgifts-bot-x.x.x.zip
     cd py-steamgifts-bot-x.x.x
     ```
-3) Log in to SteamGifts with your browser and find your PHPSESSID cookie data. Add the cookie data to the settings.ini file located in the src folder and save the file.
+3) Log in to SteamGifts with your browser and [find your PHPSESSID](#find-your-phpsessid) cookie data. Add the cookie data to the settings.ini file located in the src folder and save the file.
+
+## Find your PHPSESSID
+
+__Safari__
+1) In the top menu select "Develop" and then click "Show Web Inspector".
+2) In the Web Inspector tool click on the "Storage" tab and click on "Cookies".
+3) There you will find your PHPSESSID value.
+
+__Firefox__
+1) In the top menu select "Tool" and then click "Browser Tools" and finally "Web Developer Tools".
+2) In the Web Developer Tools click on the "Storage" tab and click on "Cookies".
+3) There you will find your PHPSESSID value.
 
 ## Run
 
@@ -34,7 +46,7 @@ You can run the bot through Docker or as a Python script in your terminal.
     ```
 2) Enter the following command to create a container and run it:
     ```
-    sudo docker run -d -e PYTHONUNBUFFERED=1 pysgbot
+    sudo docker run -d --name pysgbot -e PYTHONUNBUFFERED=1 pysgbot
     ```
     This will run it in a detached state and will enable the python output to be included in the docker logs. See https://stackoverflow.com/questions/55200135/python-docker-container-use-print for more info.
 3) You can check if the current container is running with the following command:
